@@ -73,7 +73,7 @@ export const MapPage = () => {
 
   const resize = () => {
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth < 768) {
         setWidth(true);
       } else setWidth(false);
     });
@@ -107,7 +107,7 @@ export const MapPage = () => {
           );
         })}
         <s.Container>
-          {width ? (
+          {!width ? (
             <>
               <SideBar />
             </>
@@ -125,7 +125,7 @@ export const MapPage = () => {
                 <Input
                   placeholder="Pesquise o id do Silo"
                   backgroundColor="#FFF"
-                  width={width ? "320px" : "220px"}
+                  width={!width ? "320px" : "220px"}
                 />
                 <IconButton
                   aria-label="menu"
@@ -136,7 +136,7 @@ export const MapPage = () => {
               </s.ButtonMenuContainer>
               <MenuMap open={onOpen} />
             </Box>
-            {width && (
+            {!width && (
               <s.ContainerSelectFilter>
                 <SelectRegion />
                 <SelectCity />
@@ -147,7 +147,7 @@ export const MapPage = () => {
         </s.Container>
         <s.ContainerSelectMapStyle>
           <s.BackgroundStyleMap>
-            {width ? (
+            {!width ? (
               <>
                 <FormControl>
                   <Box mb={1}>
