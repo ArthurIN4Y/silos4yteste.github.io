@@ -30,7 +30,7 @@ export const SettingsPage = () => {
       <s.ContainerMain>
         <Box sx={s.Header} mb={1}>
           {window.innerWidth < 600 ? (
-            <>
+            <s.ContainerHeader>
               <Box
                 sx={{
                   display: "flex",
@@ -41,9 +41,9 @@ export const SettingsPage = () => {
               >
                 <s.LogoContainer src={Logo} />
               </Box>
-              <img src={BellIcon} alt="bell-icon" />
+              <img src={BellIcon} alt="Bell icon" />
               <UserMenu haveAvatar />
-            </>
+            </s.ContainerHeader>
           ) : (
             <>
               <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
@@ -77,7 +77,7 @@ export const SettingsPage = () => {
           )}
         </Box>
         <Box sx={s.GridContainer}>
-          <Box mt={4}>
+          <Box mt={11.5}>
             <Box mb={3}>
               {window.innerWidth < 600 ? (
                 <s.ContainerTitle>
@@ -154,7 +154,11 @@ export const SettingsPage = () => {
                     fontSize={24}
                   />
                 </Box>
-                <LabelInter text={"Manutenção"} fontWeight="700" fontSize={24} />
+                <LabelInter
+                  text={"Manutenção"}
+                  fontWeight="700"
+                  fontSize={24}
+                />
               </s.ContainerTitle>
             ) : (
               <> </>

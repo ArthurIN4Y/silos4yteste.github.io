@@ -1,61 +1,95 @@
-import { Box, Divider } from "@mui/material";
 import {
   CapacityIcon,
   GrainIcon,
   SiloImage,
   WeightIcon,
 } from "../../assets/icons";
-import {
-  DetailsTypography,
-  HeaderTypography,
-  HeaderTypographyStrong,
-  SubtitleTypography,
-  DetailsTypographyStrong,
-  LabelInter,
-} from "../../utils/typography";
+import { theme } from "../../utils/theme";
+import { Box, Divider } from "@mui/material";
+import { LabelInter } from "../../utils/typography";
 import {
   ContainerHeader,
   ContainerSubtitle,
-  Circle,
   ContainerAbout,
+  ContainerMain,
 } from "./styles";
 
 export const UnitCard = () => {
   return (
-    <Box mt={2}>
+    <ContainerMain mt={2}>
       <ContainerHeader>
-        <HeaderTypography text="Unidade" />
-        <HeaderTypographyStrong text="São Leopoldo | 015" />
-        {/* <Circle />
-        <LabelInter text={"ativo"} fontSize={14} color="#1DCA38" /> */}
+        <LabelInter text="Unidade" fontSize={22} fontWeight="500" />
+        <LabelInter text="São Leopoldo | 015" fontSize={22} fontWeight="700" />
       </ContainerHeader>
       <ContainerSubtitle>
-        <SubtitleTypography text="Armazém Expointer | Região Sul" />
+        <LabelInter
+          text="Armazém Expointer | Região Sul"
+          fontSize={14}
+          fontWeight="400"
+          color={theme.palette.text.secondary}
+        />
       </ContainerSubtitle>
       <ContainerAbout>
-        <Box mr={1}>
-          <img src={GrainIcon} alt="grain type" />
+        <Box sx={{ display: "flex", alignItems: "flex-start" }}>
+          <Box mr={1}>
+            <img src={GrainIcon} alt="grain type" style={{ height: "22px" }} />
+          </Box>
+          <LabelInter
+            text="Tipo de grão:"
+            fontSize={14}
+            fontWeight="700"
+            color={theme.palette.text.secondary}
+          />
+          <LabelInter
+            text="Soja"
+            fontSize={14}
+            fontWeight="400"
+            color={theme.palette.text.secondary}
+          />
         </Box>
-        <DetailsTypographyStrong text="Tipo de grão:" />
-        <b />
-        <DetailsTypography text="Soja" />
         <Box mr={1} ml={2}>
-          <img src={CapacityIcon} alt="Capacity" />
+          <img src={CapacityIcon} alt="Capacity" style={{ height: "22px" }} />
         </Box>
-        <DetailsTypographyStrong text="Capacidade:" />
-        <DetailsTypography text="5000m³" />
+        <LabelInter
+          text="Capacidade:"
+          fontSize={14}
+          fontWeight="700"
+          color={theme.palette.text.secondary}
+        />
+        <LabelInter
+          text="5000m³"
+          fontSize={14}
+          fontWeight="400"
+          color={theme.palette.text.secondary}
+        />
       </ContainerAbout>
       <ContainerAbout>
         <Box mr={1}>
-          <img src={WeightIcon} alt="Weight now" />
+          <img src={WeightIcon} alt="Weight now" style={{ height: "22px" }} />
         </Box>
-        <DetailsTypographyStrong text="Peso atual:" />
-        <DetailsTypography text="60.000kg" />
+        <LabelInter
+          text="Peso Atual:"
+          fontSize={14}
+          fontWeight="700"
+          color={theme.palette.text.secondary}
+        />
+        <LabelInter
+          text="60.000kg"
+          fontSize={14}
+          fontWeight="400"
+          color={theme.palette.text.secondary}
+        />
       </ContainerAbout>
       <Box mt={"-16px"}>
-        <img src={SiloImage} alt="Silo image" />
+        <img
+          src={SiloImage}
+          alt="Silo image"
+          style={window.innerWidth < 600 && { width: "390px" }}
+        />
       </Box>
-      <Divider sx={{ width: 330, borderColor: "#D9D9D9" }} />
-    </Box>
+      {(window.innerWidth < 600 && <></>) || (
+        <Divider sx={{ width: 330, borderColor: "#D9D9D9" }} />
+      )}
+    </ContainerMain>
   );
 };

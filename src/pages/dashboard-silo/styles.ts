@@ -18,6 +18,13 @@ export const ContainerHeader = styled(Box)({
     justifyContent: "space-around",
     alignItems: "center",
     width: "100%",
+    height: "80px",
+    backgroundColor: 'black',
+    marginTop: '-16px',
+    borderRadius: '0 0 20px 20px',
+    position: "fixed",
+    marginBottom: '16px',
+    zIndex: 9999,
 });
 
 export const ContainerBody = styled(Box)({

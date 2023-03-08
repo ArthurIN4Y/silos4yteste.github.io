@@ -7,7 +7,7 @@ export const ContainerMain = styled(Box)({
     marginLeft: '32px',
 
     '@media (max-width: 768px)': {
-        marginLeft: '-90px',
+        marginLeft: '-95px',
     }
 })
 
@@ -90,3 +90,18 @@ export const ContainerTitle = styled(Box)({
     width: '100%',
     marginBottom: '8px'
 })
+
+export const ContainerHeader = styled(Box)({
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    width: "100%",
+    height: "80px",
+    backgroundColor: 'black',
+    marginTop: '90px',
+    borderRadius: '0 0 20px 20px',
+    position: "fixed",
+    marginBottom: '16px',
+    zIndex: 9999,
+});

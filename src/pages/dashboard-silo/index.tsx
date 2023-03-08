@@ -234,7 +234,7 @@ export const DashboardSilo = () => {
               <img src={BellIcon} alt="Bell icon" />
               <UserMenu haveAvatar />
             </s.ContainerHeader>
-            <s.ContainerBody>
+            <s.ContainerBody mt={7}>
               <UnitCard />
               <s.ContainerTitle mt={2} mb={1} ml={-10.5} width={"300px"}>
                 <img src={TermologyIcon} alt="Icone de temologia" />
