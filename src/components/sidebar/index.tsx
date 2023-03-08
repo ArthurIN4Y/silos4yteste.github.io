@@ -202,7 +202,11 @@ export const SideBar = () => {
                     <IconButton
                       onClick={() => handleListItemClick(index, item.url)}
                     >
-                      <img src={item.Icon} alt={item.Text} />
+                      <img
+                        src={item.Icon}
+                        alt={item.Text}
+                        style={{ width: "32px" }}
+                      />
                     </IconButton>
                   );
                 })}

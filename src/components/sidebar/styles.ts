@@ -54,7 +54,7 @@ export const DrawerStyled = styled(Drawer, {
 
       '@media (max-width: 600px)': {
         width: "100%",
-        height: "55px",
+        height: "90px",
         top: 'revert',
         bottom: 0,
         position: "fixed",

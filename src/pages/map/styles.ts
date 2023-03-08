@@ -22,7 +22,7 @@ export const ContainerFilters = styled(Box)({
     marginLeft: "32px",
 
     '@media (max-width: 600px)': {
-        marginLeft: "-60px",
+        marginLeft: "-30px",
     }
 })
 
@@ -47,8 +47,8 @@ export const ContainerSelectMapStyle = styled(Box)({
     marginBottom: "16px",
     width: "90%",
     '@media (max-width: 600px)': {
-        marginLeft: "8px",
-        marginBottom: "40px",
+        marginLeft: "13px",
+        marginBottom: "70px",
     }
 })
 
