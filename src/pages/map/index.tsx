@@ -107,7 +107,8 @@ export const MapPage = () => {
           );
         })}
         <s.Container>
-          {!width ? (
+          <SideBar/>
+          {/* {!width ? (
             <>
               <SideBar />
             </>
@@ -115,7 +116,7 @@ export const MapPage = () => {
             <>
               <Footer />
             </>
-          )}
+          )} */}
           <s.ContainerFilters>
             <Box>
               <s.ButtonMenuContainer>
@@ -125,7 +126,7 @@ export const MapPage = () => {
                 <Input
                   placeholder="Pesquise o id do Silo"
                   backgroundColor="#FFF"
-                  width={!width ? "320px" : "220px"}
+                  width={width ? "320px" : "220px"}
                 />
                 <IconButton
                   aria-label="menu"

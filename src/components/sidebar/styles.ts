@@ -1,4 +1,4 @@
-import { Drawer } from "@mui/material";
+import { Box, Drawer } from "@mui/material";
 import { Theme, CSSObject, styled } from "@mui/material/styles";
 
 const openedDrawer = (theme: Theme): CSSObject => ({
@@ -33,6 +33,10 @@ export const DrawerStyled = styled(Drawer, {
       flexDirection: "column",
       alignItems: "flex-start",
       paddingLeft: 32,
+
+      '@media (max-width: 600px)': {
+        width: "100%",
+      }
     },
   }),
   ...(!open && {
@@ -47,6 +51,15 @@ export const DrawerStyled = styled(Drawer, {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+
+      '@media (max-width: 600px)': {
+        width: "100%",
+        height: "55px",
+        top: 'revert',
+        bottom: 0,
+        position: "fixed",
+        flexDirection: "row",
+      }
     },
   }),
 }));
@@ -57,9 +70,28 @@ export const Container = styled("div")(() => ({
   alignItems: "center",
   justifyContent: "center",
   width: "100%",
+
+  '@media (max-width: 600px)': {
+    width: "100px",
+  }
 }));
 
 export const LogoContainer = styled("img")(() => ({
   width: 196,
   height: 56,
 }))
+
+export const ContainerList = styled(Box)({
+
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  height: "50%",
+
+  '@media (max-width: 600px)': {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+    width: "100%",
+  }
+})
