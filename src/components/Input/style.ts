@@ -4,6 +4,10 @@ export const Style = ((width: string | undefined, borderRadius: string | undefin
     'border-radius': borderRadius ? borderRadius : '10px',
     'width': width ? width : '379px',
     'box-shadow': boxShadow ? boxShadow : "none",
+
+    '@media (max-width: 600px)': {
+        width: '220px',
+    }
 }))
 
 

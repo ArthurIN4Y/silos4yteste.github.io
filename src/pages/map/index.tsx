@@ -71,17 +71,17 @@ export const MapPage = () => {
     setOnOpen((prevState) => !prevState);
   };
 
-  const resize = () => {
-    window.addEventListener("resize", () => {
-      if (window.innerWidth < 768) {
-        setWidth(true);
-      } else setWidth(false);
-    });
-  };
+  // const resize = () => {
+  //   window.addEventListener("resize", () => {
+  //     if (window.innerWidth < 768) {
+  //       setWidth(true);
+  //     } else setWidth(false);
+  //   });
+  // };
 
-  useEffect(() => {
-    resize();
-  }, []);
+  // useEffect(() => {
+  //   resize();
+  // }, []);
 
   return (
     <>
@@ -107,16 +107,7 @@ export const MapPage = () => {
           );
         })}
         <s.Container>
-          <SideBar/>
-          {/* {!width ? (
-            <>
-              <SideBar />
-            </>
-          ) : (
-            <>
-              <Footer />
-            </>
-          )} */}
+          <SideBar />
           <s.ContainerFilters>
             <Box>
               <s.ButtonMenuContainer>
@@ -126,7 +117,6 @@ export const MapPage = () => {
                 <Input
                   placeholder="Pesquise o id do Silo"
                   backgroundColor="#FFF"
-                  width={width ? "320px" : "220px"}
                 />
                 <IconButton
                   aria-label="menu"
@@ -137,7 +127,7 @@ export const MapPage = () => {
               </s.ButtonMenuContainer>
               <MenuMap open={onOpen} />
             </Box>
-            {!width && (
+            {window.innerWidth > 600 && (
               <s.ContainerSelectFilter>
                 <SelectRegion />
                 <SelectCity />
@@ -148,7 +138,7 @@ export const MapPage = () => {
         </s.Container>
         <s.ContainerSelectMapStyle>
           <s.BackgroundStyleMap>
-            {!width ? (
+            {window.innerWidth > 600 ? (
               <>
                 <FormControl>
                   <Box mb={1}>

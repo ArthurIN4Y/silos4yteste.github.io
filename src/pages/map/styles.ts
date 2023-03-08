@@ -20,6 +20,10 @@ export const ContainerFilters = styled(Box)({
     justifyContent: "space-between",
     width: "100%",
     marginLeft: "32px",
+
+    '@media (max-width: 600px)': {
+        marginLeft: "-60px",
+    }
 })
 
 export const ContainerSelectFilter = styled(Box)({
