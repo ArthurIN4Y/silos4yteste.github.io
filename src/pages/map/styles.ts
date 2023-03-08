@@ -22,7 +22,7 @@ export const ContainerFilters = styled(Box)({
     marginLeft: "32px",
 
     '@media (max-width: 600px)': {
-        marginLeft: "-30px",
+        marginLeft: "-80px",
     }
 })
 
@@ -75,6 +75,10 @@ export const ButtonMenuContainer = styled(Box)({
     width: "auto",
     height: "24px",
     boxShadow: "0px 8px 19px rgba(0, 0, 0, 0.15) ",
+
+    '@media (max-width: 600px)': {
+        height: '51px'
+    }
 })
 
 export const UserLocationContainer = styled(Box)({

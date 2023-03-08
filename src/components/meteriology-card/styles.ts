@@ -12,6 +12,7 @@ export const BackgroundContainer = styled(Box)({
     "@media (max-width: 768px)": {
         width: '310px',
         padding: '8px',
+        marginBottom: '112px',
     }
 });
 

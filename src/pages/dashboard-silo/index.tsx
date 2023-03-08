@@ -218,9 +218,10 @@ export const DashboardSilo = () => {
 
   return (
     <>
-      {size ? (
+      {window.innerWidth < 600 ? (
         <>
           <s.ContainerMain>
+            <SideBar/>
             <s.ContainerHeader>
               <img src={BellIcon} alt="Bell icon" />
               <UserMenu haveAvatar />
@@ -322,9 +323,6 @@ export const DashboardSilo = () => {
                 />
               </s.ContainerTitle>
               <MeteriologyCard />
-              <Box mt={7}>
-                <Footer />
-              </Box>
             </s.ContainerBody>
           </s.ContainerMain>
         </>

@@ -110,7 +110,6 @@ export const SideBar = () => {
       Icon: ReportIcon,
       IconSelected: ReportIcon,
       Text: "Home",
-      url: "/#",
     },
     {
       Icon: GearIcon,

@@ -7,7 +7,7 @@ export const ContainerMain = styled(Box)({
     marginLeft: '32px',
 
     '@media (max-width: 768px)': {
-        marginLeft: '0px',
+        marginLeft: '-90px',
     }
 })
 
@@ -20,7 +20,6 @@ export const Header = {
     '@media (max-width: 768px)': {
         justifyContent: "space-around",
         alignItems: "center",
-
     }
 }
 

@@ -71,18 +71,6 @@ export const MapPage = () => {
     setOnOpen((prevState) => !prevState);
   };
 
-  // const resize = () => {
-  //   window.addEventListener("resize", () => {
-  //     if (window.innerWidth < 768) {
-  //       setWidth(true);
-  //     } else setWidth(false);
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   resize();
-  // }, []);
-
   return (
     <>
       <MapContainer
@@ -117,6 +105,7 @@ export const MapPage = () => {
                 <Input
                   placeholder="Pesquise o id do Silo"
                   backgroundColor="#FFF"
+                  width={window.innerWidth > 600 ? "auto" : "310px"}
                 />
                 <IconButton
                   aria-label="menu"

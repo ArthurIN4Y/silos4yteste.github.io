@@ -40,7 +40,7 @@ export const ContainerScroll = styled(Box)({
     overflowY: "hidden",
     scrollBehavior: "smooth",
     ':-webkit-overflow-scrolling': "touch",
-    marginLeft: "-16px",
+    marginLeft: "30px",
 })
 
 export const ContainerGroupStatus = styled(Box)({

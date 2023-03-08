@@ -31,19 +31,10 @@ export const SettingsPage = () => {
     <Box
       sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
     >
-      {width ? (
-        <>
-          <Footer />
-        </>
-      ) : (
-        <>
-          <SideBar />
-        </>
-      )}
-
+      <SideBar />
       <s.ContainerMain>
         <Box sx={s.Header} mb={1}>
-          {width ? (
+          {window.innerWidth < 600 ? (
             <>
               <Box
                 sx={{
