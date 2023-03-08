@@ -63,6 +63,9 @@ import SearchIcon from './search_icon.svg'
 import SetLocationIcon from './set_location_icon.svg'
 import UserLocation from './user_location.svg'
 import SiloIcon from './silo_icon.svg'
+import TemperatureIconYellow from './temperature_icon_yellow.svg'
+import TemperatureIcon from './temperature_icon.svg'
+import RainIcon from './rain_icon.svg'
 
 export {
   HomeIcon,
@@ -130,4 +133,7 @@ export {
   SetLocationIcon,
   UserLocation,
   SiloIcon,
+  TemperatureIconYellow,
+  TemperatureIcon,
+  RainIcon,
 };

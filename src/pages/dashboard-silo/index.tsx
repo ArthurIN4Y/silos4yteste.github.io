@@ -33,6 +33,7 @@ import { useEffect, useState } from "react";
 import * as s from "./styles";
 import { UserMenu } from "../../components/user-menu";
 import Logo from "../../assets/images/logo.png";
+import { MeterelogyCardMobile } from "../../components/meterelogy-card-mobile";
 
 const temperature = [
   {
@@ -330,7 +331,15 @@ export const DashboardSilo = () => {
                   fontWeight="700"
                 />
               </s.ContainerTitle>
-              <MeteriologyCard />
+              {window.innerWidth < 600 ? (
+                <>
+                  <MeterelogyCardMobile />
+                </>
+              ) : (
+                <>
+                  <MeteriologyCard />
+                </>
+              )}
             </s.ContainerBody>
           </s.ContainerMain>
         </>
