@@ -5,6 +5,7 @@ interface Props {
     fontSize?: number;
     color?: string;
     fontWeight?: string;
+    lineHeight?: string;
 }
 
 export const TextHeader = styled(Typography)(({ fontSize }: { fontSize?: number }) => ({
@@ -95,10 +96,7 @@ export const TextInter = styled(Typography)((props: Props) => ({
     fontSize: props.fontSize,
     fontWeight: props.fontWeight,
     color: props.color,
-    '@media (max-width: 768px)': {
-        lineHeight: '1',
-        fontSize: '14px',
-    }
+    lineHeight: props.lineHeight
 }));
 
 export const TextRoboto = styled(Typography)((props: Props) => ({

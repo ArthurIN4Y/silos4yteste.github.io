@@ -15,7 +15,7 @@ export const ContainerMain = styled(Box)({
 export const ContainerHeader = styled(Box)({
     display: "flex",
     flexDirection: "row",
-    justifyContent: "flex-end",
+    justifyContent: "space-around",
     alignItems: "center",
     width: "100%",
 });
@@ -40,7 +40,7 @@ export const ContainerScroll = styled(Box)({
     overflowY: "hidden",
     scrollBehavior: "smooth",
     ':-webkit-overflow-scrolling': "touch",
-    marginLeft: "30px",
+    marginLeft: "-23px",
 })
 
 export const ContainerGroupStatus = styled(Box)({
@@ -98,3 +98,8 @@ export const LegendContainer = styled(Box)({
     marginLeft: '62px',
     alignItems: 'center',
 })
+
+export const LogoContainer = styled("img")(() => ({
+    width: 196,
+    height: 56,
+}))

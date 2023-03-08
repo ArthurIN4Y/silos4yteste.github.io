@@ -1,7 +1,4 @@
-import {
-  LabelInter,
-  SubtitleTypography,
-} from "../../utils/typography";
+import { LabelInter, SubtitleTypography } from "../../utils/typography";
 import { SideBar } from "../../components/sidebar";
 import "../../utils/react-slicker/slick-custom.css";
 import { UnitCard } from "../../components/unit-card";
@@ -34,8 +31,8 @@ import { theme } from "../../utils/theme";
 import { SelectButton } from "../../components/buttons/select-button";
 import { useEffect, useState } from "react";
 import * as s from "./styles";
-import { Footer } from "../../components/footer-nav";
 import { UserMenu } from "../../components/user-menu";
+import Logo from "../../assets/images/logo.png";
 
 const temperature = [
   {
@@ -156,6 +153,7 @@ const settings = {
   slidesToScroll: 1,
   arrows: true,
 };
+
 const settings_2 = {
   speed: 500,
   slidesToShow: 3,
@@ -221,14 +219,24 @@ export const DashboardSilo = () => {
       {window.innerWidth < 600 ? (
         <>
           <s.ContainerMain>
-            <SideBar/>
+            <SideBar />
             <s.ContainerHeader>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+                mt={1}
+              >
+                <s.LogoContainer src={Logo} />
+              </Box>
               <img src={BellIcon} alt="Bell icon" />
               <UserMenu haveAvatar />
             </s.ContainerHeader>
             <s.ContainerBody>
               <UnitCard />
-              <s.ContainerTitle mt={2} mb={1} ml={-3} width={"290px"}>
+              <s.ContainerTitle mt={2} mb={1} ml={-10.5} width={"300px"}>
                 <img src={TermologyIcon} alt="Icone de temologia" />
                 <LabelInter
                   text={"Sistema de"}
@@ -241,7 +249,7 @@ export const DashboardSilo = () => {
                   fontWeight="700"
                 />
               </s.ContainerTitle>
-              <s.ContainerBackground width={"320px"}>
+              <s.ContainerBackground width={"400px"}>
                 <Slider
                   nextArrow={<NextArrowCustom />}
                   prevArrow={<PrevArrowCustom />}
@@ -253,7 +261,7 @@ export const DashboardSilo = () => {
                   ))}
                 </Slider>
               </s.ContainerBackground>
-              <s.ContainerTitle mb={1} ml={-11} width={"250px"}>
+              <s.ContainerTitle mb={1} ml={-18} width={"250px"}>
                 <img src={WindIcon} alt="Icone de vento" />
                 <LabelInter text={"Análise"} fontSize={22} fontWeight="400" />
                 <LabelInter
@@ -313,7 +321,7 @@ export const DashboardSilo = () => {
                   <AeracaoCard />
                 </s.ContainerGroupStatus>
               </s.ContainerScroll>
-              <s.ContainerTitle mt={2} mb={1} ml={-5}>
+              <s.ContainerTitle mt={2} mb={1} ml={-14}>
                 <img src={MeteriologyIcon} alt="Icone de metereologia" />
                 <LabelInter text={"Estação"} fontSize={22} fontWeight="400" />
                 <LabelInter
@@ -463,7 +471,7 @@ export const DashboardSilo = () => {
                   <s.ContainerTitle ml={1} mb={1} width={"190px"}>
                     <img src={StorageIcon} alt="Meteriologic station" />
                     <Box ml={2}>
-                    <LabelInter
+                      <LabelInter
                         text={"Status"}
                         fontSize={22}
                         fontWeight="300"
@@ -481,15 +489,15 @@ export const DashboardSilo = () => {
                   <s.ContainerTitle ml={1} mb={2} width={"190px"}>
                     <img src={WindAeracaoIcon} alt="aeracao status" />
                     <LabelInter
-                        text={"Status"}
-                        fontSize={22}
-                        fontWeight="300"
-                      />
-                      <LabelInter
-                        text={"Aeração"}
-                        fontSize={22}
-                        fontWeight="700"
-                      />
+                      text={"Status"}
+                      fontSize={22}
+                      fontWeight="300"
+                    />
+                    <LabelInter
+                      text={"Aeração"}
+                      fontSize={22}
+                      fontWeight="700"
+                    />
                   </s.ContainerTitle>
                   <AeracaoCard />
                 </Box>

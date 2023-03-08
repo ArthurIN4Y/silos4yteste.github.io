@@ -21,6 +21,7 @@ interface Props {
   marginLeft?: string;
   color?: string | undefined;
   fontWeight?: string | undefined;
+  lineHeight?: string | undefined;
 }
 
 export const HeaderTypography = ({ text, fontSize }: Props) => {
@@ -89,6 +90,7 @@ export const LabelInter = (props: Props) => {
       color={props.color}
       fontSize={props.fontSize}
       fontWeight={props.fontWeight}
+      lineHeight={props.lineHeight}
     >
       {props.text}
     </TextInter>

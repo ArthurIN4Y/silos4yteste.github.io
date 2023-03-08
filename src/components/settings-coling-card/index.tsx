@@ -44,17 +44,23 @@ export const SettingsColingCard = () => {
         </Alert>
       </Snackbar>
       <Box sx={s.Header} mb={4.5} mt={2}>
-        <s.Icon src={WindBlueIcon} />
-        <Box sx={s.BoxTitle}>
-          <Box mr={1.2}>
-            <LabelInter
-              text={"Resfriamento da"}
-              fontWeight="300"
-              fontSize={24}
-            />
-          </Box>
-          <LabelInter text={"Massa"} fontWeight="700" fontSize={24} />
-        </Box>
+        {window.innerWidth < 600 ? (
+          <></>
+        ) : (
+          <>
+            <s.Icon src={WindBlueIcon} />
+            <Box sx={s.BoxTitle}>
+              <Box mr={1.2}>
+                <LabelInter
+                  text={"Resfriamento da"}
+                  fontWeight="300"
+                  fontSize={24}
+                />
+              </Box>
+              <LabelInter text={"Massa"} fontWeight="700" fontSize={24} />
+            </Box>
+          </>
+        )}
       </Box>
       <Box sx={s.Content}>
         <SettingsInfoCard color="#65DAFF" text="Dados de configuração" />
@@ -123,6 +129,7 @@ export const SettingsColingCard = () => {
         <ButtonMain
           text="Enviar configuração para o CLP"
           width="320px"
+          fontSize={14}
           height="52px"
           onClick={() => setSuccess(true)}
         />

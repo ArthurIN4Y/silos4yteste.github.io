@@ -10,7 +10,7 @@ export const Container = {
     borderRadius: '10px',
 
     '@media (max-width: 768px)': {
-        width: '320px',
+        width: '390px',
         padding: '8px',
         marginBottom: '112px',
         height: 'auto'

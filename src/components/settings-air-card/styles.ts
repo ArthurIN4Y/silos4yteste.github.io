@@ -9,7 +9,7 @@ export const Container = {
     boxShadow: '0px 8px 19px rgba(0, 0, 0, 0.15)',
     borderRadius: '10px',
     '@media (max-width: 768px)': {
-        width: '320px',
+        width: '390px',
         padding: '8px',
         marginBottom: '32px',
     }

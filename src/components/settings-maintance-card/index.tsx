@@ -44,11 +44,17 @@ export const SettingsMaintanceCard = () => {
         </Alert>
       </Snackbar>
       <Box sx={s.Header} mb={5.8} mt={5}>
-        <s.Icon src={ProgrammerMaintanceIcon} />
-        <Box mr={1.2}>
-          <LabelInter text={"Aeração de"} fontWeight="300" fontSize={24} />
-        </Box>
-        <LabelInter text={"Manutenção"} fontWeight="700" fontSize={24} />
+        {window.innerWidth < 600 ? (
+          <></>
+        ) : (
+          <>
+            <s.Icon src={ProgrammerMaintanceIcon} />
+            <Box mr={1.2}>
+              <LabelInter text={"Aeração de"} fontWeight="300" fontSize={24} />
+            </Box>
+            <LabelInter text={"Manutenção"} fontWeight="700" fontSize={24} />
+          </>
+        )}
       </Box>
       <Box sx={s.Content}>
         <SettingsInfoCard color="#D3D3D3" text="Dados de configuração" />
@@ -116,6 +122,7 @@ export const SettingsMaintanceCard = () => {
         <ButtonMain
           text="Enviar configuração para o CLP"
           width="320px"
+          fontSize={14}
           height="52px"
           onClick={() => setSuccess(true)}
         />

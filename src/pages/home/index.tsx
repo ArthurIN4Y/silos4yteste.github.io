@@ -18,14 +18,14 @@ export const Home = () => {
       <Box sx={s.ContainerHeader}>
         <ButtonLink
           text="Registro"
-          fontSize="24px"
+          fontSize={window.innerHeight > 600 ? "20px" : "24px"}
           mr="32px"
           color="#FFFFFF"
           onClick={() => navigation("/register")}
         />
         <ButtonLink
           text="Login"
-          fontSize="24px"
+          fontSize={window.innerHeight > 600 ? "20px" : "24px"}
           color="#FFFFFF"
           onClick={() => navigation("/login")}
         />
@@ -39,17 +39,18 @@ export const Home = () => {
             text="Entre com seu acesso"
             color="#FFFFFF"
             fontWeight="700"
-            fontSize={32}
+            fontSize={window.innerHeight > 600 ? 24: 32}
+
           />
         </Box>
         <Box mb={4}>
           <ButtonMain
             text="Fazer Login"
             width="485px"
-            height="85px"
+            height={window.innerHeight > 600 ? "50px" : "85px"}
             widthRes="285px"
             borderRadius="4px"
-            fontSize={24}
+            fontSize={window.innerHeight > 600 ? 20 : 24}
             onClick={() => navigation("/login")}
           />
         </Box>
@@ -65,7 +66,7 @@ export const Home = () => {
           <ButtonLink
             text="Criar uma conta"
             color="#FFFFFF"
-            fontSize="24px"
+            fontSize={window.innerHeight > 600 ? "20px" : "24px"}
             onClick={() => navigation("/register")}
           />
         </Box>

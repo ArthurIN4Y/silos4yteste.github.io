@@ -19,8 +19,8 @@ export const LoginPage = () => {
       <Box sx={s.ContainerHeader}>
         <ButtonLink
           text="Registro"
-          fontSize="24px"
-          mr="32px"
+          fontSize={window.innerHeight > 600 ? "20px" : "24px"}
+          mr={window.innerHeight > 600 ? "0px" : "32px"}
           color="#33303E"
           onClick={() => navigation("/register")}
         />
@@ -47,10 +47,10 @@ export const LoginPage = () => {
           <ButtonMain
             text="Acessar"
             borderRadius="4px"
-            fontSize={24}
+            fontSize={window.innerHeight > 600 ? 20 : 24}
             width="385px"
             widthRes="285px"
-            height="74px"
+            height={window.innerHeight > 600 ? "50px" : "85px"}
             onClick={() => navigation("/map-page")}
           />
         </Box>

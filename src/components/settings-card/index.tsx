@@ -35,11 +35,17 @@ export const SettingsCard = ({ onClick, open, onClose }: CardProps) => {
       </Snackbar>
       <Box sx={s.Container}>
         <Box sx={s.Header} mb={1}>
-          <s.Icon src={RestIcon} />
-          <Box mr={1.2}>
-            <LabelInter text={"Tempo de"} fontWeight="300" fontSize={24} />
-          </Box>
-          <LabelInter text={"Descanso"} fontWeight="700" fontSize={24} />
+          {window.innerWidth < 600 ? (
+            <></>
+          ) : (
+            <>
+              <s.Icon src={RestIcon} />
+              <Box mr={1.2}>
+                <LabelInter text={"Tempo de"} fontWeight="300" fontSize={24} />
+              </Box>
+              <LabelInter text={"Descanso"} fontWeight="700" fontSize={24} />
+            </>
+          )}
         </Box>
         <Box sx={s.Content}>
           <SettingsInfoCard color="#FFC46C" text="Dados de configuração" />
@@ -72,6 +78,7 @@ export const SettingsCard = ({ onClick, open, onClose }: CardProps) => {
             width="320px"
             height="52px"
             onClick={onClick}
+            fontSize={14}
           />
         </Box>
       </Box>

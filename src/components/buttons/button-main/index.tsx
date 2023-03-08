@@ -34,6 +34,7 @@ export const ButtonMain = (props: Props) => {
       onClick={props.onClick}
     >
       <LabelInter
+        lineHeight="1"
         text={props.text}
         color={props.textColor || "#FFF"}
         fontSize={props.fontSize}

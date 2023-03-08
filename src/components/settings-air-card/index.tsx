@@ -44,11 +44,21 @@ export const SettingsAirCard = () => {
         </Alert>
       </Snackbar>
       <Box sx={s.Header} mb={1}>
-        <s.Icon src={WindAeracaoIcon} />
-        <Box mr={1.2}>
-          <LabelInter text={"Renovação do ar"} fontWeight="300" fontSize={24} />
-        </Box>
-        <LabelInter text={"Intragranular"} fontWeight="700" fontSize={24} />
+        {window.innerWidth < 600 ? (
+          <></>
+        ) : (
+          <>
+            <s.Icon src={WindAeracaoIcon} />
+            <Box mr={1.2}>
+              <LabelInter
+                text={"Renovação do ar"}
+                fontWeight="300"
+                fontSize={24}
+              />
+            </Box>
+            <LabelInter text={"Intragranular"} fontWeight="700" fontSize={24} />
+          </>
+        )}
       </Box>
       <Box sx={s.Content}>
         <SettingsInfoCard color="#DFBD2C" text="Dados de configuração" />
@@ -110,6 +120,7 @@ export const SettingsAirCard = () => {
         <ButtonMain
           text="Enviar configuração para o CLP"
           width="320px"
+          fontSize={14}
           height="52px"
           onClick={() => setSuccess(true)}
         />

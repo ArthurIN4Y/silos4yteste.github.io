@@ -10,7 +10,7 @@ export const BackgroundContainer = styled(Box)({
     backgroundColor: '#FFFFFF',
     boxShadow: '0px 8px 19px rgba(0, 0, 0, 0.15)',
     "@media (max-width: 768px)": {
-        width: '310px',
+        width: '385px',
         padding: '8px',
         marginBottom: '112px',
     }
@@ -26,7 +26,7 @@ export const ContainerInformations = styled(Box)({
     border: '1px solid #E5E5E5',
     borderRadius: '5px',
     "@media (max-width: 768px)": {
-        width: '290px',
+        width: '367px',
         padding: '8px',
     }
 

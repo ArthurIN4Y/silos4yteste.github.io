@@ -72,3 +72,21 @@ export const GridContainer = {
         alignItems: "center",
     }
 }
+
+export const LogoContainer = styled("img")(() => ({
+    width: 196,
+    height: 56,
+}))
+
+export const Icon = styled('img')({
+    width: '24px',
+    height: '24px',
+    marginRight: '8px',
+})
+
+export const ContainerTitle = styled(Box)({
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    marginBottom: '8px'
+})

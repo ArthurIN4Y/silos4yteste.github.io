@@ -13,7 +13,7 @@ export const Container = (marginTop: number | undefined, marginBottom: number | 
     marginBottom: marginBottom,
 
     '@media (max-width: 768px)': {
-        width: '276px',
+        width: '320px',
     }
 })
 
