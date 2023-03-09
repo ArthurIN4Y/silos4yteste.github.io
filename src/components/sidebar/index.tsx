@@ -68,7 +68,7 @@ export const SideBar = () => {
     {
       Icon: FolderIcon,
       IconSelected: FolderIconYellow,
-      Text: "Inventário",
+      Text: "Meus equipamentos",
       Divider: (!open && (
         <Divider
           sx={{ height: 2, width: 50, borderColor: "#DFBD2C", ml: "-33px" }}
@@ -78,6 +78,7 @@ export const SideBar = () => {
           sx={{ height: 2, width: 250, borderColor: "#DFBD2C", ml: "-280px" }}
         />
       ),
+      url: "/inventory",
     },
     {
       Icon: GearIcon,
@@ -109,7 +110,8 @@ export const SideBar = () => {
     {
       Icon: ReportIcon,
       IconSelected: ReportIcon,
-      Text: "Home",
+      Text: "Meus equipamentos",
+      url: "/report-page",
     },
     {
       Icon: GearIcon,

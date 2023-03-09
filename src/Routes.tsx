@@ -6,6 +6,7 @@ import { LoginPage } from "./pages/login";
 import { MapPage } from "./pages/map";
 import { Profile } from "./pages/profile";
 import { RegisterPage } from "./pages/register";
+import { ReportPage } from "./pages/report";
 import { ResetPassword } from "./pages/reset-password";
 import { SettingsPage } from "./pages/settings";
 import { UsersPage } from "./pages/users";
@@ -48,7 +49,11 @@ export const router = createBrowserRouter([
     element: <MapPage />,
   },
   {
-    path: "/invetory",
+    path: "/inventory",
     element: <InventoryPage />,
+  },
+  {
+    path: "/report-page",
+    element: <ReportPage />,
   },
 ]);

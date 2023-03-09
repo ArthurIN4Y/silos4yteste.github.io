@@ -91,6 +91,7 @@ export const LabelInter = (props: Props) => {
       fontSize={props.fontSize}
       fontWeight={props.fontWeight}
       lineHeight={props.lineHeight}
+      marginLeft={props.marginLeft}
     >
       {props.text}
     </TextInter>

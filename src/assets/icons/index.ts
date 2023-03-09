@@ -66,6 +66,8 @@ import SiloIcon from './silo_icon.svg'
 import TemperatureIconYellow from './temperature_icon_yellow.svg'
 import TemperatureIcon from './temperature_icon.svg'
 import RainIcon from './rain_icon.svg'
+import ReportIconYellow from './report_icon_yellow.svg'
+import MapPinIcon from './pin_yellow.svg'
 
 export {
   HomeIcon,
@@ -136,4 +138,6 @@ export {
   TemperatureIconYellow,
   TemperatureIcon,
   RainIcon,
-};
+  ReportIconYellow,
+  MapPinIcon,
+}

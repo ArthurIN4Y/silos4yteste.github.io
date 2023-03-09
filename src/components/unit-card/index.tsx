@@ -32,7 +32,7 @@ export const UnitCard = () => {
       <ContainerAbout>
         <Box sx={{ display: "flex", alignItems: "flex-start" }}>
           <Box mr={1}>
-            <img src={GrainIcon} alt="grain type" style={{ height: "22px" }} />
+            <img src={GrainIcon} alt="grain type" style={{ height: 22 }} />
           </Box>
           <LabelInter
             text="Tipo de grão:"
@@ -48,7 +48,7 @@ export const UnitCard = () => {
           />
         </Box>
         <Box mr={1} ml={2}>
-          <img src={CapacityIcon} alt="Capacity" style={{ height: "22px" }} />
+          <img src={CapacityIcon} alt="Capacity" style={{ height: 22 }} />
         </Box>
         <LabelInter
           text="Capacidade:"
@@ -65,7 +65,7 @@ export const UnitCard = () => {
       </ContainerAbout>
       <ContainerAbout>
         <Box mr={1}>
-          <img src={WeightIcon} alt="Weight now" style={{ height: "22px" }} />
+          <img src={WeightIcon} alt="Weight now" style={{ height: 22 }} />
         </Box>
         <LabelInter
           text="Peso Atual:"
@@ -84,7 +84,7 @@ export const UnitCard = () => {
         <img
           src={SiloImage}
           alt="Silo image"
-          style={window.innerWidth < 600 && { width: "390px" }}
+          // style={(window.innerWidth < 600 && { width: 390 })}
         />
       </Box>
       {(window.innerWidth < 600 && <></>) || (

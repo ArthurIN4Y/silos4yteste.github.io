@@ -27,7 +27,7 @@ export const UserMenu = ({ haveAvatar }: UserMenuProps) => {
   const navigation = useNavigate();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -53,7 +53,12 @@ export const UserMenu = ({ haveAvatar }: UserMenuProps) => {
                 },
               }}
               badgeContent={
-                <LabelInter text={"12"} fontSize={24} fontWeight={"400"} color="#000"/>
+                <LabelInter
+                  text={"12"}
+                  fontSize={24}
+                  fontWeight={"400"}
+                  color="#000"
+                />
               }
             >
               <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
@@ -113,11 +118,15 @@ export const UserMenu = ({ haveAvatar }: UserMenuProps) => {
           <Avatar /> Meus dados
         </MenuItem>
         <Divider />
-        <MenuItem onClick={() => {navigate('/inventory')}}>
+        <MenuItem
+          onClick={() => {
+            navigate("/inventory");
+          }}
+        >
           <ListItemIcon>
-            <img src={FolderIcon} alt="icone de ajuda" />
+            <img src={FolderIcon} alt="folder icon" />
           </ListItemIcon>
-          Inventario
+          Meus Equipamentos
         </MenuItem>
         <MenuItem onClick={() => {}}>
           <ListItemIcon>

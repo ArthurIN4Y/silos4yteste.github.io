@@ -3,13 +3,15 @@ import { styled } from "@mui/material/styles";
 
 
 export const ContainerMain = styled(Box)({
-    backgroundColor: "#FFFFFF",
-    borderRadius: "8px",
-    boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.2)",
-    padding: "10px",
-    marginTop: "22px",
-    marginBottom: "10px",
-    width: "375px",
+    '@media (max-width: 768px)': {
+        backgroundColor: "#FFFFFF",
+        borderRadius: "8px",
+        boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.2)",
+        padding: "10px",
+        marginTop: "22px",
+        marginBottom: "10px",
+        width: "375px",
+    }
 })
 
 export const ContainerHeader = styled(Box)({
