@@ -449,7 +449,7 @@ export const ReportPage = () => {
                   <DatePick />
                 </Box>
               </Box>
-              <Box display={"flex"} mt={4} >
+              <Box display={"flex"} mt={4}>
                 <Box mr={3}>
                   <ButtonMain
                     text="Gerar Relátorio"
@@ -458,11 +458,23 @@ export const ReportPage = () => {
                   />
                 </Box>
                 <Box>
-                  <ButtonMain text="Baixar PDF" widthRes="180px" height="41px" />
+                  <ButtonMain
+                    text="Baixar PDF"
+                    widthRes="180px"
+                    height="41px"
+                  />
                 </Box>
               </Box>
             </s.ContainerFilters>
-            <s.ContainerAccordion mt={8}>
+            <s.ContainerText mt={2}>
+              <img
+                src={ReportIconYellow}
+                alt="report image"
+                style={{ width: 26 }}
+              />
+              <LabelInter text={"Relatórios"} fontWeight="700" fontSize={26} />
+            </s.ContainerText>
+            <s.ContainerAccordion mt={2}>
               <Accordion>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}

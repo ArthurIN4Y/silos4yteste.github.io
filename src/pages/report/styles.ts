@@ -32,6 +32,10 @@ export const ContainerText = styled(Box)({
     alignItems: 'center',
     flexDirection: 'row',
     width: '175px',
+
+    '@media (max-width: 768px)': {
+        width: '170px',
+    }
 })
 
 export const ContainerMenu = styled(Box)({
