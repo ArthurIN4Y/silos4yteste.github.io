@@ -27,6 +27,7 @@ export const UserMenu = ({ haveAvatar }: UserMenuProps) => {
   const navigation = useNavigate();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+  const navigate = useNavigate()
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -112,7 +113,7 @@ export const UserMenu = ({ haveAvatar }: UserMenuProps) => {
           <Avatar /> Meus dados
         </MenuItem>
         <Divider />
-        <MenuItem onClick={() => {}}>
+        <MenuItem onClick={() => {navigate('/inventory')}}>
           <ListItemIcon>
             <img src={FolderIcon} alt="icone de ajuda" />
           </ListItemIcon>
