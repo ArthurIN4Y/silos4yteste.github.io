@@ -1,6 +1,7 @@
 import { Logout, Settings } from "@mui/icons-material";
 import {
   Avatar,
+  Badge,
   Divider,
   IconButton,
   ListItemIcon,
@@ -16,6 +17,7 @@ import {
   HelpIcon,
   SignoutIcon,
 } from "../../assets/icons";
+import { LabelInter } from "../../utils/typography";
 
 interface UserMenuProps {
   haveAvatar?: boolean;
@@ -37,7 +39,24 @@ export const UserMenu = ({ haveAvatar }: UserMenuProps) => {
       {haveAvatar ? (
         <>
           <IconButton onClick={handleClick}>
-            <Avatar />
+            <Badge
+              overlap="circular"
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              variant="dot"
+              sx={{
+                "& .MuiBadge-badge": {
+                  bgcolor: "#DFBD2C",
+                  height: "12px",
+                  width: "12px",
+                  borderRadius: "6px",
+                },
+              }}
+              badgeContent={
+                <LabelInter text={"12"} fontSize={24} fontWeight={"400"} color="#000"/>
+              }
+            >
+              <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+            </Badge>
           </IconButton>
         </>
       ) : (

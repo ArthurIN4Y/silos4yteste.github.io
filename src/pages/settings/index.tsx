@@ -41,7 +41,6 @@ export const SettingsPage = () => {
               >
                 <s.LogoContainer src={Logo} />
               </Box>
-              <img src={BellIcon} alt="Bell icon" />
               <UserMenu haveAvatar />
             </s.ContainerHeader>
           ) : (
