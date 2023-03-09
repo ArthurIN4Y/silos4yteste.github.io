@@ -171,7 +171,7 @@ const NextArrowCustom = (props: any) => {
         ...style,
         display: "block",
         color: "#8C8A97",
-        width: "12px",
+        width: 12,
       }}
       onClick={onClick}
     />
@@ -187,7 +187,7 @@ const PrevArrowCustom = (props: any) => {
         ...style,
         display: "block",
         color: "#8C8A97",
-        width: "12px",
+        width: 12,
       }}
       onClick={onClick}
     />
@@ -197,7 +197,6 @@ const PrevArrowCustom = (props: any) => {
 export const DashboardSilo = () => {
   const [period, setPeriod] = useState("");
   const [size, setSize] = useState(false);
-  console.log(size);
 
   const handleChange = (event: SelectChangeEvent) => {
     setPeriod(event.target.value);

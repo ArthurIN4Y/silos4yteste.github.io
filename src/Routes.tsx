@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { DashboardSilo } from "./pages/dashboard-silo";
 import { Home } from "./pages/home";
+import { InventoryPage } from "./pages/inventory";
 import { LoginPage } from "./pages/login";
 import { MapPage } from "./pages/map";
 import { Profile } from "./pages/profile";
@@ -45,5 +46,9 @@ export const router = createBrowserRouter([
   {
     path: "/map-page",
     element: <MapPage />,
+  },
+  {
+    path: "/invetory",
+    element: <InventoryPage />,
   },
 ]);
