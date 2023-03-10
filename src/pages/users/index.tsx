@@ -28,6 +28,7 @@ import { MainSelectCostCenter } from "../../components/buttons/select-cost-cente
 import { ButtonLink } from "../../components/buttons/button-link";
 import { DialogDelete } from "../../components/dialogs/dialog-delete";
 import { UserMenu } from "../../components/user-menu";
+import { Notifications } from "../../components/notifications";
 
 const data = [
   {
@@ -284,8 +285,9 @@ export const UsersPage = () => {
             <HeaderTypographyStrong text="Usuários" />
           </Box>
           <Box sx={s.ContainerRight}>
-            <img src={HelpIcon} alt="help-icon" />
-            <img src={BellIcon} alt="bell-icon" />
+            <Box>
+              <Notifications />
+            </Box>
             <Box sx={s.ContainerAvatar}>
               <Avatar sx={s.Avatar} />
               <Box display={"flex"} flexDirection={"row"} ml={1}>
@@ -293,7 +295,7 @@ export const UsersPage = () => {
                 <SupportTypographyStrong text=", João" />
               </Box>
             </Box>
-            <UserMenu/>
+            <UserMenu />
           </Box>
         </Box>
         <Box sx={s.ContainerBody}>

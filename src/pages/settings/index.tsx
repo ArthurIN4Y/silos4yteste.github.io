@@ -18,6 +18,7 @@ import { UserMenu } from "../../components/user-menu";
 import { LabelInter } from "../../utils/typography";
 import * as s from "./styles";
 import Logo from "../../assets/images/logo.png";
+import { Notifications } from "../../components/notifications";
 
 export const SettingsPage = () => {
   const [open, setOpen] = useState(false);
@@ -58,7 +59,7 @@ export const SettingsPage = () => {
               </Box>
               <Box sx={s.ContainerRight}>
                 <Box>
-                  <img src={BellIcon} alt="bell-icon" />
+                  <Notifications/>
                 </Box>
                 <Avatar sx={s.Avatar} />
                 <Box display={"flex"} flexDirection={"row"} ml={1}>

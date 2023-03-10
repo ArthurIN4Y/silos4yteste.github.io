@@ -1,15 +1,15 @@
 import * as s from "./styles";
 import { Avatar, Box } from "@mui/material";
 import { SideBar } from "../../components/sidebar";
-import { BellIcon, FolderIconYellow } from "../../assets/icons";
+import { FolderIconYellow } from "../../assets/icons";
 import { LabelInter } from "../../utils/typography";
 import { UserMenu } from "../../components/user-menu";
-import { InformationsHeader } from "../../components/informations-header";
 import { TableInventory } from "../../components/table-inventory";
 import { useState } from "react";
 import { ButtonLink } from "../../components/buttons/button-link";
 import { InventoryCard } from "../../components/cards-invetory-responsive";
 import Logo from "../../assets/images/logo.png";
+import { Notifications } from "../../components/notifications";
 
 const data = [
   {
@@ -93,7 +93,9 @@ export const InventoryPage = () => {
                 />
               </s.ContainerText>
               <s.ContainerMenu>
-                <img src={BellIcon} alt="bell-icon" />
+                <Box>
+                  <Notifications />
+                </Box>
                 <Avatar />
                 <Box display={"flex"} flexDirection={"row"} ml={1}>
                   <LabelInter text="Olà," fontWeight="400" fontSize={14} />

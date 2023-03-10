@@ -15,6 +15,7 @@ interface Props {
   backgroundColor?: string;
   boxShadow?: string;
   startAdornment?: JSX.Element;
+  type?: string;
 }
 
 export const Input = (props: Props) => {
@@ -40,6 +41,7 @@ export const Input = (props: Props) => {
         )}
         size="small"
         defaultValue={props.defaultValue}
+        type={props.type}
       />
     </Box>
   );

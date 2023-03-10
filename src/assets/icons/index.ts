@@ -68,6 +68,9 @@ import TemperatureIcon from './temperature_icon.svg'
 import RainIcon from './rain_icon.svg'
 import ReportIconYellow from './report_icon_yellow.svg'
 import MapPinIcon from './pin_yellow.svg'
+import UserProfileIcon from './user_profile_icon.svg'
+import CloseIcon  from './close_icon.svg'
+import BellIconYellow from  './bell_icon_yellow.svg'
 
 export {
   HomeIcon,
@@ -140,4 +143,7 @@ export {
   RainIcon,
   ReportIconYellow,
   MapPinIcon,
+  UserProfileIcon,
+  CloseIcon,
+  BellIconYellow,
 }

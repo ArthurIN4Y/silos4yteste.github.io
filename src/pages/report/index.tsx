@@ -9,13 +9,10 @@ import {
 } from "@mui/material";
 import { SideBar } from "../../components/sidebar";
 import {
-  BellIcon,
   CapacityIcon,
   GrainIcon,
   MapPinIcon,
-  ReportIcon,
   ReportIconYellow,
-  StorageIcon,
   TermologyIcon,
   WeightIcon,
 } from "../../assets/icons";
@@ -23,13 +20,12 @@ import { LabelInter } from "../../utils/typography";
 import { UserMenu } from "../../components/user-menu";
 
 import Logo from "../../assets/images/logo.png";
-import { SelectButton } from "../../components/buttons/select-button";
 import { SelectCity } from "../../components/buttons/select-city";
 import { DatePick } from "../../components/date-picker";
 import { ButtonMain } from "../../components/buttons/button-main";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { ClimateChart } from "../../components/climate-chart";
 import { DateChart } from "../../components/date-chart";
+import { Notifications } from "../../components/notifications";
 
 const data = [
   {
@@ -110,7 +106,9 @@ export const ReportPage = () => {
                 />
               </s.ContainerText>
               <s.ContainerMenu>
-                <img src={BellIcon} alt="bell-icon" />
+                <Box>
+                  <Notifications />
+                </Box>
                 <Avatar />
                 <Box display={"flex"} flexDirection={"row"} ml={1}>
                   <LabelInter text="Olà," fontWeight="400" fontSize={14} />

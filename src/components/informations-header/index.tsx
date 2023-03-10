@@ -1,13 +1,8 @@
 import { Box, Divider } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
-
-import {
-  BellIcon,
-  CalendarIcon,
-  ClockIcon,
-  HelpIcon,
-} from "../../assets/icons";
+import { CalendarIcon, ClockIcon } from "../../assets/icons";
 import { SubtitleTypography } from "../../utils/typography";
+import { Notifications } from "../notifications";
 import { UserMenu } from "../user-menu";
 import { MainContainer } from "./styles";
 
@@ -27,8 +22,9 @@ export const InformationsHeader = () => {
         <SubtitleTypography text={dateNow} fontSize={20} />
         <img src={ClockIcon} alt="" />
         <SubtitleTypography text={hourNow} fontSize={20} />
-        <img src={HelpIcon} alt="" />
-        <img src={BellIcon} alt="" />
+        <Box>
+          <Notifications />
+        </Box>
         <Avatar
           sx={{ border: "3px solid #DFBD2C", width: "32px", height: "32px" }}
         />
@@ -36,7 +32,7 @@ export const InformationsHeader = () => {
           <SubtitleTypography text="Olá," />
           <SubtitleTypography text="João" />
         </Box>
-        <UserMenu/>
+        <UserMenu />
       </MainContainer>
       <Divider sx={{ width: "100%", marginTop: "12px" }} />
     </Box>

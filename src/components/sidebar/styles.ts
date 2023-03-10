@@ -95,3 +95,55 @@ export const ContainerList = styled(Box)({
     width: "100%",
   }
 })
+
+export const ContainerProfile = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  padding: "16px",
+})
+
+export const ContainerProfileHeader = styled(Box)({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  width: "180px",
+})
+
+export const ContainerProfileBody = styled(Box)({
+  display: "flex",
+  flexDirection: "row",
+})
+
+export const ContainerButton = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'space-around',
+  height: '120px',
+  width: '100%',
+}
+
+export const ContainerAlert = {
+  display: 'flex',
+  flexDirection: 'row',
+  marginBottom: '20px',
+  textAlign: 'center',
+  width: '60%'
+}
+
+export const MainContainer = {
+  alignItems: "center",
+  display: "flex",
+  flexDirection: "column"
+}
+
+export const ContentContainer = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "60%",
+  textAlign: 'center',
+  marginBottom: '20px',
+}

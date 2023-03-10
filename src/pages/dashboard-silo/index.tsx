@@ -7,7 +7,6 @@ import { CableCard } from "../../components/cable-card";
 import { MeteriologyCard } from "../../components/meteriology-card";
 import {
   ArrowClimateIcon,
-  BellIcon,
   MeteriologyIcon,
   ProcessIcon,
   StorageIcon,
