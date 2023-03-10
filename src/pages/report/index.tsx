@@ -125,7 +125,7 @@ export const ReportPage = () => {
             <s.ContainerBody>
               <Box mt={2}>
                 <s.ContainerFilters>
-                  <Box>
+                  <Box mr={2}>
                     <LabelInter
                       text={"Equipamento"}
                       fontSize={14}
@@ -186,7 +186,7 @@ export const ReportPage = () => {
                     <s.ContainerChart>
                       <DateChart />
                       <Box ml={3}>
-                        <s.ContainerLegend>
+                        <s.ContainerLegend mb={1}>
                           <s.SquareLegend backgroundColor={"#DFBD2C"} />
                           <LabelInter
                             text={"Tempo em atividade"}
@@ -195,7 +195,7 @@ export const ReportPage = () => {
                             marginLeft={"4px"}
                           />
                         </s.ContainerLegend>
-                        <s.ContainerLegend>
+                        <s.ContainerLegend mb={1}>
                           <s.SquareLegend backgroundColor={"#FFE160"} />
                           <LabelInter
                             text={"Tempo desligada"}
@@ -204,7 +204,7 @@ export const ReportPage = () => {
                             marginLeft={"4px"}
                           />
                         </s.ContainerLegend>
-                        <s.ContainerLegend>
+                        <s.ContainerLegend mb={1}>
                           <s.SquareLegend backgroundColor={"#FFEB98"} />
                           <LabelInter
                             text={"Tempo em manutenção"}
@@ -213,7 +213,7 @@ export const ReportPage = () => {
                             marginLeft={"4px"}
                           />
                         </s.ContainerLegend>
-                        <s.ContainerLegend>
+                        <s.ContainerLegend mb={1}>
                           <s.SquareLegend backgroundColor={"#E4E4E4"} />
                           <LabelInter
                             text={"Outros"}

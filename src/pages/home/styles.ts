@@ -15,7 +15,7 @@ export const ContainerHeader = {
     'display': 'flex',
     'flexDirection': 'row',
     'justifyContent': 'flex-end',
-    'margin': '60px 53px'
+    'margin': '10px 50px 60px'
 }
 
 export const ContainerContent = {
@@ -23,4 +23,11 @@ export const ContainerContent = {
     'flexDirection': 'column',
     'justifyContent': 'center',
     'alignItems': 'center',
+}
+
+export const ContainerFooter = {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    textAlign: 'center',
 }

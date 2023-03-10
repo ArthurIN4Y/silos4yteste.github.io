@@ -61,7 +61,7 @@ export const LoginPage = () => {
             fontSize="12px"
           />
         </Box>
-        <Box mt={28}>
+        <Box mt={28} sx={s.ContainerFooter}>
           <LabelInter
             text="By continuing you agree to CMAK Agro Privacy Policy and Terms of Service"
             color="#D3D3D3"

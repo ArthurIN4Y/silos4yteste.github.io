@@ -9,11 +9,12 @@ interface Props {
   ml?: string | undefined;
   mr?: string | undefined;
   color?: string | undefined;
+  mt?: string | undefined;
 }
 
 export const ButtonLink = (props: Props) => {
   return (
-    <Box mr={props.mr} ml={props.mr}>
+    <Box mr={props.mr} ml={props.mr} mt={props.mt}>
       <Button
         startIcon={props.startIcon}
         size="small"

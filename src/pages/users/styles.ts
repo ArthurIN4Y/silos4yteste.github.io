@@ -35,7 +35,7 @@ export const ContainerLeft = {
     display: "flex",
     flexDirection: "row",
     width: '100%',
-    marginLeft: "22px",
+    marginLeft: "40px",
 }
 
 export const ContainerRight = {

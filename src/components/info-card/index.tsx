@@ -18,8 +18,8 @@ export const InfoCard = () => {
         display={"flex"}
         flexDirection={"column"}
         alignItems={"center"}
-        mt={2}
-        mb={2}
+        mt={1}
+        mb={2.5}
       >
         <HeaderTypography text="Aeração" />
         <HeaderTypographyStrong text="Recomendada" />
@@ -30,6 +30,7 @@ export const InfoCard = () => {
           display: "flex",
           justifyContent: "flex-end",
           flexDirection: "row",
+          mt: -2.5,
         }}
       >
         <SupportTypography

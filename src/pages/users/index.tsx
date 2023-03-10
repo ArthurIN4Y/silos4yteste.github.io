@@ -9,6 +9,7 @@ import { Badge } from "../../components/badge";
 import { SideBar } from "../../components/sidebar";
 import {
   HeaderTypographyStrong,
+  LabelInter,
   SupportTypography,
   SupportTypographyStrong,
 } from "../../utils/typography";
@@ -281,8 +282,12 @@ export const UsersPage = () => {
         />
         <Box sx={s.ContainerHeader}>
           <Box sx={s.ContainerLeft}>
-            <img src={UserIconYellow} alt="user-icon" />
-            <HeaderTypographyStrong text="Usuários" />
+            <img
+              src={UserIconYellow}
+              alt="user-icon"
+              style={{ width: "32px", height: "32px" }}
+            />
+            <LabelInter text="Usuários" fontSize={24} fontWeight="700" />
           </Box>
           <Box sx={s.ContainerRight}>
             <Box>

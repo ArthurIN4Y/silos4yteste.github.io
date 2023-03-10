@@ -58,7 +58,7 @@ export const ContainerTable = styled(Box)({
     display: 'flex',
     alignItems: 'center',
     marginTop: '20px',
-    width: '1560px',
+    width: '96%',
     height: 'auto',
     padding: '20px',
     backgroundColor: '#fff',

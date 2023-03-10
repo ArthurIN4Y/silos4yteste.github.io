@@ -1,4 +1,4 @@
-import { IconButton } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import L from "leaflet";
 import { useState } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
@@ -21,9 +21,23 @@ export const LocationMarker = () => {
   };
   return (
     <>
-      <IconButton onClick={setUsersLocation}>
-        <img src={SetLocationIcon} alt="localização" />
-      </IconButton>
+      <Box
+        sx={{
+          backgroundColor: "#FFF",
+          borderRadius: "8px",
+          width: "32px",
+          height: "32px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginRight: "4px",
+          marginBottom: "8px",
+        }}
+      >
+        <IconButton onClick={setUsersLocation}>
+          <img src={SetLocationIcon} alt="localização" />
+        </IconButton>
+      </Box>
       {position === null ? null : (
         <Marker key={position} position={position} icon={UserLocation}>
           <Popup>Você está aqui</Popup>

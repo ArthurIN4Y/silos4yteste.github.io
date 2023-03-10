@@ -7,6 +7,7 @@ import { CableCard } from "../../components/cable-card";
 import { MeteriologyCard } from "../../components/meteriology-card";
 import {
   ArrowClimateIcon,
+  CamIcon,
   MeteriologyIcon,
   ProcessIcon,
   StorageIcon,
@@ -413,46 +414,50 @@ export const DashboardSilo = () => {
                     ))}
                   </Slider>
                 </s.ContainerBackground>
-                <s.ContainerTitle ml={1} width={"240px"} mb={1}>
-                  <img src={ArrowClimateIcon} alt="Termology" />
+                <s.ContainerTitle ml={1} width={"340px"} mb={1}>
+                  <img src={CamIcon} alt="Termology" width={32} height={32} />
                   <LabelInter
-                    text={"Gráfico de"}
+                    text={"Câmeras de"}
                     fontSize={22}
                     fontWeight="300"
                   />
-                  <LabelInter text={"Tempo"} fontSize={22} fontWeight="700" />
+                  <LabelInter
+                    text={"Monitoramento"}
+                    fontSize={22}
+                    fontWeight="700"
+                  />
                 </s.ContainerTitle>
-                <s.ContainerBackgroundChart>
-                  <Box sx={{ display: "flex", flexDirection: "row" }}>
-                    <s.LegendContainer>
-                      <s.LegendSquare color={theme.palette.primary.main} />
-                      <SubtitleTypography
-                        text="Temperatura"
-                        marginLeft={"12px"}
-                      />
-                    </s.LegendContainer>
-                    <s.LegendContainer>
-                      <s.LegendSquare color={theme.palette.secondary.main} />
-                      <SubtitleTypography text="Umidade" marginLeft={"12px"} />
-                    </s.LegendContainer>
-                    <s.LegendContainer>
-                      <s.LegendSquare color={theme.palette.secondary.light} />
-                      <SubtitleTypography
-                        text="Umidade de Equilibrio"
-                        marginLeft={"12px"}
-                      />
-                    </s.LegendContainer>
-                    <Box marginLeft={"350px"}>
-                      <SelectButton
-                        value={period}
-                        onChange={() => handleChange}
-                      />
-                    </Box>
-                  </Box>
-                  <Box mt={3}>
-                    <ClimateChart />
-                  </Box>
-                </s.ContainerBackgroundChart>
+                <Box display={"flex"} justifyContent={"space-between"}>
+                  <s.ContainerBackgroundChart>
+                    <LabelInter
+                      text={"Interna"}
+                      fontSize={18}
+                      fontWeight={"300"}
+                    />
+                    <img
+                      src="http://173.198.10.174/mjpg/video.mjpg"
+                      alt=""
+                      width={480}
+                      height={320}
+                      style={{ borderRadius: "10px" }}
+                    />
+                  </s.ContainerBackgroundChart>
+                  <s.ContainerBackgroundChart>
+                    <LabelInter
+                      text={"Externa"}
+                      fontSize={18}
+                      fontWeight={"300"}
+                    />
+
+                    <img
+                      src="http://62.242.189.219/mjpg/video.mjpg"
+                      alt=""
+                      width={480}
+                      height={320}
+                      style={{ borderRadius: "10px" }}
+                    />
+                  </s.ContainerBackgroundChart>
+                </Box>
               </Box>
               <Box ml={4} mt={8}>
                 <Box>

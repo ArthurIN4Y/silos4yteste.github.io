@@ -17,18 +17,20 @@ interface Props {
   widthRes?: string | undefined;
   textColor?: string | undefined;
   boxShadow?: string | undefined;
+  startIcon?: any;
 }
 
 export const ButtonMain = (props: Props) => {
   return (
     <Button
+      startIcon={props.startIcon}
       sx={s.Style(
         props.width,
         props.height,
         props.borderRadius,
         props.color,
         props.widthRes,
-        props.boxShadow,
+        props.boxShadow
       )}
       variant="contained"
       onClick={props.onClick}

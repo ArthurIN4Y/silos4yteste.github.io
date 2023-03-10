@@ -39,8 +39,7 @@ export const Home = () => {
             text="Entre com seu acesso"
             color="#FFFFFF"
             fontWeight="700"
-            fontSize={window.innerHeight > 600 ? 24: 32}
-
+            fontSize={window.innerHeight > 600 ? 24 : 32}
           />
         </Box>
         <Box mb={4}>
@@ -70,12 +69,14 @@ export const Home = () => {
             onClick={() => navigation("/register")}
           />
         </Box>
-        <LabelInter
-          text="By continuing you agree to CMAK Agro Privacy Policy and Terms of Service"
-          color="#FFFFFF"
-          fontWeight="400"
-          fontSize={16}
-        />
+        <Box sx={s.ContainerFooter}>
+          <LabelInter
+            text="By continuing you agree to CMAK Agro Privacy Policy and Terms of Service"
+            color="#FFFFFF"
+            fontWeight="400"
+            fontSize={16}
+          />
+        </Box>
       </Box>
     </s.Container>
   );

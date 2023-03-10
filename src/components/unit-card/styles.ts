@@ -27,7 +27,7 @@ export const ContainerSubtitle = styled(Box)({
     justifyContent: "flex-start",
     alignItems: "center",
     flexDirection: "row",
-    width: "330px",
+    width: "100%",
     fontSize: "14px",
     color: "#9E9E9E",
     marginBottom: "12px",
@@ -47,4 +47,13 @@ export const ContainerAbout = styled(Box)({
     alignItems: "flex-start",
     width: "auto",
     marginBottom: "4px",
+})
+
+export const ContainerSubtitleCam = styled(Box)({
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "row",
+    width: "100%",
+    height: "auto",
 })

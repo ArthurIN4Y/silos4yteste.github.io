@@ -7,7 +7,7 @@ export const BackgroundContainer = styled(Box)({
     backgroundColor: theme.palette.primary.light,
     boxShadow: '0px 8px 19px rgba(0, 0, 0, 0.15)',
     width: '213px',
-    height: '168px',
+    height: '190px',
     borderRadius: '10px',
     padding: '16px',
     "@media (max-width: 768px)": {

@@ -92,8 +92,8 @@ export const LegendSquare = styled(Box)(({ color }: Props) => ({
 export const ContainerBackgroundChart = styled(Box)({
     backgroundColor: '#FFFFFF',
     boxShadow: '0px 8px 19px rgba(0, 0, 0, 0.15)',
-    width: '1042px',
-    height: '332px',
+    width: '480px',
+    height: 'auto',
     borderRadius: '10px',
     padding: '24px',
 })
