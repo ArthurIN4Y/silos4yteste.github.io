@@ -12,7 +12,11 @@ export const ContainerAlert = {
     flexDirection: 'row',
     marginBottom: '20px',
     textAlign: 'center',
-    width: '63%'
+    width: '63%',
+
+    '@media (max-width: 600px)': {
+        width: '100%',
+    }
 }
 
 export const MainContainer = {

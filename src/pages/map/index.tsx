@@ -114,6 +114,16 @@ export const MapPage = () => {
                   <img src={SearchIcon} alt="icon menu" />
                 </IconButton>
               </s.ButtonMenuContainer>
+              <Box
+                sx={{
+                  width: "100vw",
+                  height: "100vh",
+                  position: "absolute",
+                  zIndex: 1,
+                  display: onOpen ? "block" : "none",
+                }}
+                onClick={() => setOnOpen(false)}
+              />
               <MenuMap open={onOpen} />
             </Box>
             {window.innerWidth > 600 && (

@@ -32,7 +32,7 @@ export const DialogForgotPassword = (props: Props) => {
       <DialogTitle>
         <LabelInter
           text={"Esqueci minha senha"}
-          fontSize={32}
+          fontSize={window.innerWidth < 600 ? 24 : 32}
           fontWeight="700"
         />
       </DialogTitle>
@@ -50,7 +50,11 @@ export const DialogForgotPassword = (props: Props) => {
           />
         </Box>
         <Box sx={s.ContentContainer}>
-          <Input label={"Email"} mb={2} />
+          <Input
+            label={"Email"}
+            mb={2}
+            width={window.innerWidth < 600 ? "320px" : "auto"}
+          />
         </Box>
         <Box sx={s.ContainerButton}>
           <ButtonMain
@@ -61,11 +65,7 @@ export const DialogForgotPassword = (props: Props) => {
             fontSize={18}
             onClick={() => setOpen(true)}
           />
-          <ButtonLink
-            text="Cancelar"
-            fontSize="18px"
-            onClick={() => handleClose}
-          />
+          <ButtonLink text="Cancelar" fontSize="18px" onClick={props.onClose} />
         </Box>
       </DialogContent>
     </Dialog>

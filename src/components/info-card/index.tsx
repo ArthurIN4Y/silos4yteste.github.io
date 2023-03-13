@@ -3,6 +3,7 @@ import { MenuIcon, OpenIcon, WindAlertIcon } from "../../assets/icons";
 import {
   HeaderTypography,
   HeaderTypographyStrong,
+  LabelInter,
   SupportTypography,
 } from "../../utils/typography";
 import { BackgroundContainer } from "./styles";
@@ -10,19 +11,18 @@ import { BackgroundContainer } from "./styles";
 export const InfoCard = () => {
   return (
     <BackgroundContainer>
-      <Box sx={{ width: "100%", display: "flex", justifyContent: "flex-end" }}>
-        <img src={MenuIcon} alt="Menu" />
+      <Box mt={2}>
+        <img src={WindAlertIcon} alt="WindAlert" />
       </Box>
-      <img src={WindAlertIcon} alt="WindAlert" />
       <Box
         display={"flex"}
         flexDirection={"column"}
         alignItems={"center"}
         mt={1}
-        mb={2.5}
+        mb={3.5}
       >
-        <HeaderTypography text="Aeração" />
-        <HeaderTypographyStrong text="Recomendada" />
+        <LabelInter text="Aeração" lineHeight="1" fontSize={18} fontWeight="300"/>
+        <LabelInter text="Recomendada" fontSize={18} fontWeight="700" />
       </Box>
       <Box
         sx={{

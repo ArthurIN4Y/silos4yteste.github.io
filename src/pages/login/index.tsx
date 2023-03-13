@@ -8,14 +8,18 @@ import { Input } from "../../components/Input";
 import { useNavigate } from "react-router-dom";
 import { DialogForgotPassword } from "../../components/dialogs/dialog-forgot-password";
 import { useState } from "react";
+import { DialogHelp } from "../../components/dialogs/dialog-help";
 
 export const LoginPage = () => {
   const navigation = useNavigate();
   const [open, setOpen] = useState(false);
+  const [openHelp, setOpenHelp] = useState(false);
   const handleClose = () => setOpen(false);
+  const handleCloseHelp = () => setOpenHelp(false);
   return (
     <Box sx={s.Container}>
       <DialogForgotPassword isOpen={open} onClose={handleClose} />
+      <DialogHelp isOpen={openHelp} onClose={handleCloseHelp} />
       <Box sx={s.ContainerHeader}>
         <ButtonLink
           text="Registro"
@@ -59,6 +63,7 @@ export const LoginPage = () => {
             text="Problemas para fazer login?"
             color="#DFBD2C"
             fontSize="12px"
+            onClick={() => setOpenHelp(true)}
           />
         </Box>
         <Box mt={28} sx={s.ContainerFooter}>
@@ -66,7 +71,7 @@ export const LoginPage = () => {
             text="By continuing you agree to CMAK Agro Privacy Policy and Terms of Service"
             color="#D3D3D3"
             fontWeight="400"
-            fontSize={16}
+            fontSize={window.innerWidth < 600 ? 12 : 16}
           />
         </Box>
       </Box>

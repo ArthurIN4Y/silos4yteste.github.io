@@ -35,7 +35,7 @@ export const DialogHelp = (props: Props) => {
       </Snackbar>
       <DialogTitle>
         <LabelInter
-          text={"Esta com alguma dúvida?"}
+          text={"Esta com algum problema?"}
           fontSize={32}
           fontWeight="700"
         />
@@ -58,7 +58,7 @@ export const DialogHelp = (props: Props) => {
             label={"Descrição"}
             multiline
             rows={6}
-            placeholder="Nos conte brevemente qual a sua dúvida..."
+            placeholder="Nos conte brevemente qual o seu problema..."
           />
         </Box>
         <Box sx={s.ContainerButton}>

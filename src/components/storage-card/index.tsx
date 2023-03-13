@@ -30,7 +30,6 @@ export const StorageCard = () => (
   <ContainerCard>
     <ContainerHeader>
       <img src={RefreshIcon} alt="refresh" />
-      <img src={MenuIcon} alt="refresh" />
     </ContainerHeader>
     {ProcessStatus[1]}
   </ContainerCard>

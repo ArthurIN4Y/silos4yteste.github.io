@@ -19,9 +19,10 @@ interface Props {
   };
   width?: string;
   borderRadius?: string;
+  variant?: any;
 }
 
-export const SelectCity = ({ width, borderRadius }: Props) => {
+export const SelectCity = ({ width, borderRadius, variant }: Props) => {
   const [value, setValue] = useState<string>();
   const handleChange = (event: SelectChangeEvent) => {
     setValue(event.target.value);
@@ -36,6 +37,7 @@ export const SelectCity = ({ width, borderRadius }: Props) => {
           onChange={handleChange}
           sx={s.style(width, borderRadius)}
           defaultValue={"saoleopoldo"}
+          variant={variant}
         >
           <MenuItem value={"saoleopoldo"}>São Leopoldo</MenuItem>
           <MenuItem value={"canoas"}>Canoas</MenuItem>

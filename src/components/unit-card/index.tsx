@@ -31,7 +31,7 @@ export const UnitCard = () => {
         </IconButton>
         </Box>
         <Box sx={{ padding: "24px", marginTop: '-32px' }}>
-          <LabelInter text={"Iterna"} fontSize={18} fontWeight={"300"} />
+          <LabelInter text={"Interna"} fontSize={18} fontWeight={"300"} />
 
           <img
             src="http://173.198.10.174/mjpg/video.mjpg"

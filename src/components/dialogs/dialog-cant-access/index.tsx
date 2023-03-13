@@ -32,7 +32,7 @@ export const DialogCantAccess = (props: Props) => {
       <DialogTitle>
         <LabelInter
           text={"Recuperação de acesso"}
-          fontSize={32}
+          fontSize={window.innerWidth < 600 ? 24 : 32}
           fontWeight="700"
         />
       </DialogTitle>
@@ -48,13 +48,22 @@ export const DialogCantAccess = (props: Props) => {
           />
         </Box>
         <Box sx={s.ContentContainer}>
-          <Input label={"Nome de usuário"} mb={2} />
-          <Input label={"Email"} mb={2} />
+          <Input
+            label={"Nome de usuário"}
+            mb={2}
+            width={window.innerWidth < 600 ? "320px" : "auto"}
+          />
+          <Input
+            label={"Email"}
+            mb={2}
+            width={window.innerWidth < 600 ? "320px" : "auto"}
+          />
           <Input
             label={"Descrição"}
             multiline
             rows={6}
             placeholder="Diga brevemente o que esta acontecendo..."
+            width={window.innerWidth < 600 ? "320px" : "auto"}
           />
         </Box>
         <Box sx={s.ContainerButton}>
@@ -66,11 +75,7 @@ export const DialogCantAccess = (props: Props) => {
             fontSize={18}
             onClick={() => setOpen(true)}
           />
-          <ButtonLink
-            text="Cancelar"
-            fontSize="18px"
-            onClick={() => handleClose}
-          />
+          <ButtonLink text="Cancelar" fontSize="18px" onClick={props.onClose} />
         </Box>
       </DialogContent>
     </Dialog>

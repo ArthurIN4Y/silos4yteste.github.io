@@ -74,7 +74,7 @@ export const Home = () => {
             text="By continuing you agree to CMAK Agro Privacy Policy and Terms of Service"
             color="#FFFFFF"
             fontWeight="400"
-            fontSize={16}
+            fontSize={window.innerWidth < 600 ? 12 : 16}
           />
         </Box>
       </Box>

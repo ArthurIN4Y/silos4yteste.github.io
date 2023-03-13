@@ -5,7 +5,7 @@ import {
 } from "../../utils/typography";
 import { ContainerCard, ContainerContent, ContainerHeader } from "./styles";
 import {
-    CicleIcon,
+  CicleIcon,
   IntragranularIcon,
   MaintanceIcon,
   MassIcon,
@@ -27,8 +27,13 @@ const ProcessStatus: any = {
         mt={2}
         mb={2}
       >
-        <LabelInter text={'Renovação do'} fontWeight="300" fontSize={18}/>
-        <LabelInter text={'Ar Intragranular'} fontWeight="700" fontSize={24}/>
+        <LabelInter
+          text={"Renovação do"}
+          fontWeight="300"
+          fontSize={18}
+          lineHeight="1"
+        />
+        <LabelInter text={"Ar Intragranular"} fontWeight="700" fontSize={18} />
       </Box>
     </ContainerContent>
   ),
@@ -98,7 +103,6 @@ export const ProcessCard = () => (
   <ContainerCard>
     <ContainerHeader>
       <img src={RefreshIcon} alt="refresh" />
-      <img src={MenuIcon} alt="refresh" />
     </ContainerHeader>
     {ProcessStatus[1]}
   </ContainerCard>
