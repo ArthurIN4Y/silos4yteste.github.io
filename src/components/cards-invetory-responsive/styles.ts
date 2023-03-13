@@ -34,3 +34,8 @@ export const TextWrapper = styled(Box)({
     width: 'auto',
     flexDirection: 'row',
 }) 
+
+export const ContainerGroupButton = {
+    'box-shadow': '0px 8px 19px rgba(0, 0, 0, 0.15)',
+    'border-radius': '10px',
+}

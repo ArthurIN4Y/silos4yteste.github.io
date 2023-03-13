@@ -10,6 +10,7 @@ interface Props {
   mr?: string | undefined;
   color?: string | undefined;
   mt?: string | undefined;
+  disabled?: boolean;
 }
 
 export const ButtonLink = (props: Props) => {
@@ -20,6 +21,7 @@ export const ButtonLink = (props: Props) => {
         size="small"
         sx={s.Style(props.fontSize, props.color)}
         onClick={props.onClick}
+        disabled={props.disabled}
       >
         {props.text}
       </Button>

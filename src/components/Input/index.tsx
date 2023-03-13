@@ -4,7 +4,7 @@ import { LabelTypography } from "../../utils/typography";
 import * as s from "./style";
 
 interface Props {
-  label?: string | undefined;
+  label?: string | number | undefined;
   mb?: number;
   width?: string;
   borderRadius?: string;
@@ -16,6 +16,7 @@ interface Props {
   boxShadow?: string;
   startAdornment?: JSX.Element;
   type?: string;
+  disabled?: boolean;
 }
 
 export const Input = (props: Props) => {
@@ -42,6 +43,7 @@ export const Input = (props: Props) => {
         size="small"
         defaultValue={props.defaultValue}
         type={props.type}
+        disabled={props.disabled}
       />
     </Box>
   );

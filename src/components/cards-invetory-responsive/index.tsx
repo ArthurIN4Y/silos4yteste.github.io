@@ -2,18 +2,48 @@ import { LabelInter } from "../../utils/typography";
 import * as s from "./styles";
 import IconButton from "@mui/material/IconButton";
 import { GearIconYellow } from "../../assets/icons";
-import { Box } from "@mui/material";
+import { Box, Tooltip } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { GroupButton } from "../buttons/button-group";
+import { useState } from "react";
 export const InventoryCard = () => {
+  const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+  const [onDelete, setOpenDelete] = useState(false);
+  const [onEdit, setOpenEdit] = useState(false);
+  
+  const tooltipContent = ({ onDelete, onEdit }: any) => {
+    return (
+      <Box sx={s.ContainerGroupButton}>
+        <GroupButton
+          onDelete={onDelete}
+          onEdit={onEdit}
+          onRegister={() => setOpen(true)}
+        />
+      </Box>
+    );
+  };
+
   return (
-    <s.ContainerCard>
+    <s.ContainerCard onClick={() => navigate("/dashboard-silo")}>
       <s.ContainerCardHeader>
         <LabelInter text={"Silo 0015"} fontSize={18} fontWeight="700" />
-        <IconButton
-          aria-label="settings button"
-          onClick={() => console.log("clicou")}
+        <Tooltip
+          title={tooltipContent({ onEdit, onDelete })}
+          placement="right"
+          sx={{ cursor: "pointer" }}
+          componentsProps={{
+            tooltip: {
+              sx: {
+                bgcolor: "transparent",
+              },
+            },
+          }}
         >
-          <img src={GearIconYellow} alt="setting icon" />
-        </IconButton>
+          <IconButton aria-label="settings">
+            <img src={GearIconYellow} alt="plus-icon" />
+          </IconButton>
+        </Tooltip>
       </s.ContainerCardHeader>
       <s.ContainerCardBody>
         <Box

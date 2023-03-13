@@ -18,6 +18,7 @@ interface Props {
   textColor?: string | undefined;
   boxShadow?: string | undefined;
   startIcon?: any;
+  disabled?: boolean;
 }
 
 export const ButtonMain = (props: Props) => {
@@ -34,6 +35,7 @@ export const ButtonMain = (props: Props) => {
       )}
       variant="contained"
       onClick={props.onClick}
+      disabled={props.disabled}
     >
       <LabelInter
         lineHeight="1"

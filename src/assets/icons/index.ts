@@ -72,6 +72,7 @@ import UserProfileIcon from './user_profile_icon.svg'
 import CloseIcon from './close_icon.svg'
 import BellIconYellow from './bell_icon_yellow.svg'
 import CamIcon from './cam_icon.svg'
+import SampIcon from './samp_icon.svg'
 
 export {
   HomeIcon,
@@ -147,5 +148,6 @@ export {
   UserProfileIcon,
   CloseIcon,
   BellIconYellow,
-  CamIcon
+  CamIcon,
+  SampIcon,
 }
